@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs</title>
+    <link rel="icon" href="Images/svmlogo2.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@100;200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="sub-header">
+      <nav>
+        <a href="home.html"><img src="Images/svmlogo2.png" alt="" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="courses.html">COURSES</a></li>
+            <li><a href="blog.html">BLOGS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>Blogs</h1>
+    </section>
+
+    <!-- ----------blog post page---------------- -->
+
+    <section class="blog-content">
+      <div class="row">
+        <div class="blog-left">
+          <img src="Images/Gate.jpg" alt="" />
+          <h1>Swami Vivekanand Mahavidyalaya</h1>
+          <p>
+            The Swami Vivekananda Mahavidyalay, Udgir was established in 2001 under the aegis of Swami Vivekanand Shikshan Prasarak Mandal and affiliated with Swami Ramanand Teerth Marathwada University, Nanded.The primary intention for establishing the college was to open the doors of Science and technology specifically in Bio-technology, Computer and Information Technology, Media and Journalism, Library and Information Science and skill based higher education to therural, economically weaker, upstarts, SC/ ST/ OBC, and SBC students of Udgir territory. The college was started initially with 15 students and a few teachers, now more than 500 studentsare getting a quality education in Science and technology. In its 22 years, the college has established nine undergraduate, eight post-graduate, and two Ph. D. programs to empower the youth. To spread higher education in the educationally backward and Ruralarea of Udgir city and surrounding areas of the college in tune with the education policy of the affiliated universitywith the CBCS examination pattern of the university. The programs affiliated with the university are tailor-made for the market and commercial houses. The students joining the programs are getting exciting experiences of learning based on practical and project-based. The college is doing its best to develop a close interface with IT/BT and media industries to make available ready to employ qualified students with optimum communication and technological knowledge and skills. The college has state-of-the-art infrastructure facilities and well-equipped computer, Bio-technology, Microbiology, Medical Lab Technology, Media Sciences and Library & Information Sciences laboratories. The library reflexives ambiance of stocked with books, Journals/ Magazines, e-books, and e-journals for the students and the teachers. The college is committed to making students conscious of their social responsibility through outreach programs organized by NSS to enhance students’ social awareness and sensitivity toward the upliftment of the underprivileged sections of the society. The College is recognized by 2(f) and 12(b) of the UGC act 1956. The college is very particular about the discipline and attendance of the students and enforces strict regulations to ensure that the students imbibe the correct values and approach toward life. The college builds inter-religious understanding, dialogue, and awareness through prayer services, lectures, and openness to all faiths and cultures.
+          </p>
+
+          <div class="comment-box">
+    <h3>Leave a comment</h3>
+    <form class="comment-form" id="comment-form">
+        <input type="text" name="name" placeholder="Enter Name" required/>
+        <input type="email" name="email" placeholder="Enter Email" required/>
+        <textarea name="message" placeholder="Enter Comment" rows="5" required></textarea>
+        <button type="submit" class="hero-btn red-btn">Post Comment</button>
+    </form>
+</div>
+
+<script>
+document.getElementById('comment-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Collect form data
+    const formData = new FormData(this);
+
+    // Send form data using AJAX
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'form_handler.php', true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                alert('Comment posted successfully!');
+                // You can update the UI as needed here
+            } else {
+                alert('Error posting comment.');
+            }
+        }
+    };
+    xhr.send(formData);
+});
+</script>
+
+        </div>
+        <div class="blog-right">
+          <h3>Post Categories</h3>
+          <div>
+            <span>Bachelor of Computer Application</span>
+            <span>4 Years</span>
+          </div>
+          <div>
+            <span>Bachelor of Computer Science</span>
+            <span>4 Years</span>
+          </div>
+          <div>
+            <span>Bachelor of Software Development</span>
+            <span>3 Years</span>
+            </div>
+          <div>
+            <span>Master of Computer Science</span>
+            <span>2 Years</span>
+          </div>  
+          <div>
+            <span>M.Sc. Computer Management</span>
+            <span>2 Years</span>
+            </div>
+          <div>
+            <span>M.Sc. Biotechnology</span>
+            <span>2 Years</span>
+          </div>
+          <div>
+            <span>M.A. Education</span>
+            <span>1 Years</span>
+          </div>
+          <div>
+            <span>Ph.D. Computer Science</span>
+            <span>3-6 Years</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------footer---------------- -->
+
+    <section class="footer">
+      <h1>About Us</h1>
+      <div class="footer-intro">
+        <p>
+          "We are passionate developers dedicated to crafting innovative
+          solutions that merge technology with creativity. <br />Our mission is
+          to build seamless experiences that redefine possibilities."
+        </p>
+      </div>
+      <div class="icons">
+        <a
+          href="https://www.facebook.com/harshadbadnale6714/"
+          class="fa fa-facebook"
+        ></a>
+        <a href="https://x.com/harshbadnale" class="fa fa-twitter"></a>
+        <a
+          href="https://www.instagram.com/meharshadbadnale/"
+          class="fa fa-instagram"
+        ></a>
+        <a
+          href="https://in.linkedin.com/in/harshad-badnale%F0%9F%9A%80-423071282"
+          class="fa fa-linkedin"
+        ></a>
+      </div>
+      <p>Made with <i class="fa fa-heart-o"></i> by HARSHAD</p>
+      <p>© 2025 Harshad Badnale</p>
+    </section>
+
+    <!--Javascript for Toggle Menu-->
+    <script>
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>
